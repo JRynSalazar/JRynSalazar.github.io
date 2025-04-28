@@ -6,10 +6,69 @@
     <title>Home</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/landing.css" />
     <link rel="stylesheet" href="css/font.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    
+    <style>
+
+      body {
+    margin: 0;
+    line-height: 1.6;
+    background: #f8f4ef;
+    color: #222;
+ 
+  }
+  
+  .navbar {
+    background: #401a1a;
+    /* padding: 1rem 0; */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+
+  
+  
+  .nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .logo {
+
+    display: flex;
+    align-items: center; 
+  }
+  .navbar .logo img {
+    max-width: 80px;  
+    height: auto;     
+    display: block;    
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+   }
+   
+    </style>
 
 </head>
 <body>
@@ -29,7 +88,7 @@
 
   <header class="hero">
     <div class="hero-content">
-      <img src="images/logo-mystical.png" alt="">
+      <img src="images/logo-mystical.png" class="img1" alt="">
       <h1>Legends of the Supernatural</h1>
       <p>Unravel the mysteries of the Philippines' most captivating mythical beings.</p>
     </div>
@@ -81,11 +140,18 @@
 
   
   
-
-  <footer>
-    &copy; 2025 Mystical Beings of the Philippines | All Rights Reserved
+  <footer class="footer">
+    <div class="footer-left">
+      <img src="images/USER_1_-removebg-preview.png" alt="Logo" class="footer-logo">
+    </div>
+    <div class="footer-right">
+      © 2025 Your Company. All rights reserved.
+    </div>
   </footer>
-
-  <script src="js/nav.js"></script>
+<script>
+  function navigateTo(page) {
+    window.location.href = page;
+  }
+</script>
 </body>
 </html>

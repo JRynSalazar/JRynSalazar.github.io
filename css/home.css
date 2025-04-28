@@ -18,6 +18,13 @@ body {
   overflow: hidden;
 }
 
+.hero-content img.img1 {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: flex;
+  margin: 0 auto;
+}
 .hero::before {
   content: "";
   position: absolute;
@@ -191,6 +198,9 @@ ul {
   .hero-content h1 {
     font-size: 2.2rem;
   }
+  .hero-content img.img1 {
+    max-width: 350px;  
+}
 
   .hero-content p {
     font-size: 1rem;
@@ -227,6 +237,9 @@ ul {
   .hero-content p {
     font-size: 0.95rem;
   }
+  .hero-content img.img1 {
+    max-width: 200px;  
+}
 
   .logo {
     font-size: 1.2rem;
