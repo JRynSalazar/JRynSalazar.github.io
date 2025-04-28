@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Mystical Beings</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/image-removebg-preview.png" class="bav-logo">
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="creature.html">Creature Index</a></li>
+        <li><a href="blog.html">Blog Articles</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#" onclick="confirmLogout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+
+  <header class="hero">
+    <div class="hero-content">
+      <img src="images/logo-mystical.png" alt="Logo">
+      <h1>Legends of the Supernatural - Dashboard</h1>
+      <p>Manage and curate content for the Philippine mythology blog</p>
+    </div>
+  </header>
+
+  <section class="intro-section">
+    <div class="video-container">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/Ml4eO0dfzpg?si=gg1QfEJifNEZ_Paq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="intro-content">
+      <div class="img-container">
+        <img src="images/logo-mystical.png" alt="mystical beings">
+      </div>
+      <div class="separator"></div>
+      <div class="intro-text">
+        <h2>Introduction</h2>
+        <p>
+          The Philippines has a rich array of myths and folklore, including supernatural creatures like the Aswang and Tikbalang that have captivated generations. This blog explores these creatures through cultural analysis, stories, and historical insight — ensuring they remain alive in our collective memory.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section class="features">
+    <h2>Features</h2>
+    <div class="feature-list">
+      <div class="feature-item">
+        <strong>Blog Articles:</strong> Explore the origins and cultural relevance of mythical creatures.
+      </div>
+      <div class="feature-item">
+        <strong>Creature Index:</strong> A categorized list with detailed descriptions and stories.
+      </div>
+      <div class="feature-item">
+        <strong>Static Content:</strong> Fixed pages like folklore intros and thematic essays.
+      </div>
+      <div class="feature-item">
+        <strong>Multimedia Content:</strong> Illustrations and videos that bring legends to life.
+      </div>
+      <div class="feature-item">
+        <strong>Comment Section (Optional):</strong> Share your insights on the legends (planned).
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="objectives">
+    <h2>Objectives</h2>
+    <p>This blog aims to educate, preserve, and inspire curiosity about the mythologies of the Philippines:</p>
+    <ul>
+      <li>Educate readers on legendary creatures and folklore.</li>
+      <li>Preserve myths through written form and cultural analysis.</li>
+      <li>Analyze cultural impacts of folklore and mythology.</li>
+      <li>Build a haven for mythology enthusiasts and researchers.</li>
+    </ul>
+  </section>
+
+  <section class="contact-us">
+    <h2>Contact Us</h2>
+    <p>If you have any questions, feedback, or would like to contribute stories and insights, feel free to reach out to us!</p>
+    <div class="contact-details">
+      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:mysticalbeings.ph@gmail.com">mysticalbeings.ph@gmail.com</a></p>
+      <p><i class="fas fa-phone"></i> Phone: +63 912 345 6789</p>
+      <p><i class="fas fa-map-marker-alt"></i> Address: Mankilam, Tagum City, Davao Del Norte</p>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer-left">
+      <img src="images/USER_1_-removebg-preview.png" alt="Logo" class="footer-logo">
+    </div>
+    <div class="footer-right">
+      © 2025 Your Company. All rights reserved.
+    </div>
+  </footer>
+
+  
+  <script src="js/nav.js"></script>
+  <script>
+    function confirmLogout() {
+    let confirmAction = confirm("Are you sure you want to logout?");
+    if (confirmAction) {
+      window.location.href = "landing.html";
+    }
+  }
+  </script>
+</body>
+</html>

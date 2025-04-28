@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'wizard';
+    src: url('../fonts/Wizardry\ Night.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'dragon';
+    src: url('../fonts/Dragon\ Fire.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'standtall';
+    src: url('../fonts/strandall\ demo.ttf') format('truetype');
+  }
+
+  
+  body {
+
+    font-family: 'standtall', sans-serif;
+    font-size: larger;
+  }
+
+  h2 {
+    font-family: 'wizard', sans-serif;
+  }
+  
+  h3
+  {
+    font-family: 'dragon', sans-serif;
+  }

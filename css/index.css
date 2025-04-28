@@ -1,0 +1,143 @@
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('../fonts/BreitkopfFraktur.ttf') format('truetype');
+
+}
+
+.creature-index {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+h3{
+  font-family: 'MyFont';
+  font-size: 23px;
+}
+
+header {
+  background-color: #401a1a;
+  color: white;
+  text-align: center;
+  padding: 50px 20px 30px;
+  margin-bottom: 0;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  margin-top: 15px;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: 400;
+}
+.creature-index h2 {
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.creature-index p {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.creature-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.creature-item {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.creature-item:hover {
+  transform: translateY(-5px);
+}
+
+.creature-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.more-details-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #401a1a;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.more-details-btn:hover {
+  background-color: #633636;
+}
+
+
+
+@media (max-width: 768px) {
+  .creature-index {
+    padding: 1rem;
+  }
+
+  .creature-index h2 {
+    font-size: 1.8rem;
+  }
+
+  .creature-index p {
+    font-size: 1rem;
+  }
+
+  .creature-item {
+    width: 90%;
+  }
+
+  .creature-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .creature-index h2 {
+    font-size: 1.6rem;
+  }
+
+  .creature-item {
+    padding: 0.8rem;
+  }
+
+  .creature-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .creature-image {
+    height: 150px;
+  }
+
+  .more-details-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kapre - Philippine Mythical Creature</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/font.css" />
+  <link rel="stylesheet" href="css/style-creature.css" />
+
+  <style>
+    body {
+  margin-top: 100px;
+  
+}
+  </style>
+</head> 
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/image-removebg-preview.png" class="bav-logo">
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="creature.html">Creature Index</a></li>
+        <li><a href="blog.html">Blog Articles</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#" onclick="confirmLogout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Kapre</h1>
+
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="images/kapre/kapre.jpg" class="img1" style="width:100%">
+      </div>
+    
+      <div class="mySlides fade">
+        <img src="images/kapre/kapre2.jpg" class="img1" style="width:100%">
+      </div>
+    
+      <div class="mySlides fade">
+        <img src="images/kapre/kapre3.jpg" class="img1" style="width:100%">
+      </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
+    <p><strong>Overview:</strong> The <em>Kapre</em> is a giant, tree-dwelling creature in Philippine mythology. Often depicted as a tall, dark-skinned being with a thick beard, the Kapre is known for smoking a large cigar and scaring people away from forests at night.</p>
+
+    <h2><span style="color: red;">P</span>hysical <span style="color: red;">A</span>ppearance</h2>
+    <ul>
+      <li>Large, dark-skinned humanoid figure, often depicted as being 7 to 10 feet tall</li>
+      <li>Thick, wild beard and hair</li>
+      <li>Usually seen sitting on a large tree, smoking a cigar or tobacco pipe</li>
+      <li>Has glowing red eyes and a deep, eerie laugh</li>
+    </ul>
+
+    <h2><span style="color: red;">A</span>bilities</h2>
+    <ul>
+      <li>Can create an eerie smoke that confuses travelers</li>
+      <li>Capable of causing disorientation and fear in its victims</li>
+      <li>Can control the forest and trees, making them seem alive or dangerous</li>
+    </ul>
+
+    <h2><span style="color: red;">w</span>eaknesses</h2>
+    <ul>
+      <li>Bright light or fire is said to repel the Kapre</li>
+      <li>Charms, such as those made from certain plants or roots, are believed to protect against it</li>
+      <li>Some believe it can be forced away by a powerful or courageous individual</li>
+    </ul>
+
+    <h2><span style="color: red;">C</span>ultural <span style="color: red;">S</span>ignificance</h2>
+    <p>The Kapre is a popular subject in Filipino ghost stories. It is often described as a prankster, sometimes playing tricks on people who wander too far into the forest. While it is mostly a frightening figure, some legends depict the Kapre as a protector of the woods, warning those who enter it at night.</p>
+
+    
+  </div>
+  <footer class="footer">
+    <div class="footer-left">
+      <img src="images/USER_1_-removebg-preview.png" alt="Logo" class="footer-logo">
+    </div>
+    <div class="footer-right">
+      © 2025 Your Company. All rights reserved.
+    </div>
+  </footer>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+    
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }    
+    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+    
+      slides[slideIndex - 1].style.display = "block";  
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 3000); 
+    }
+  </script>
+</body>
+</html>

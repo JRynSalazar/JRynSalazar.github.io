@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #667eea, #764ba2);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: white;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      transition: 0.3s;
+    }
+
+    .form-group input:focus {
+      border-color: #667eea;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+    }
+
+    .btn {
+      width: 100%;
+      padding: 0.8rem;
+      background: #667eea;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #5a67d8;
+    }
+
+    .footer {
+      margin-top: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .footer a {
+      color: #667eea;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Create Account</h2>
+    <form onsubmit="register(event)">
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="name" placeholder="Enter Name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Enter your Email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm">Confirm Password</label>
+          <input type="password" id="confirm" placeholder="Confirm password" required>
+        </div>
+        <button type="submit" class="btn">Register</button>
+      </form>
+      
+    <div class="footer">
+      Already have an account? <a href="#">Login here</a>
+    </div>
+  </div>
+
+
+  <script>
+    function register(event) {
+      event.preventDefault();   
+    
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      let confirm = document.getElementById("confirm").value;
+    
+      if (password !== confirm) {
+        alert("Passwords do not match!");
+        return;
+      }
+    
+        document.cookie = `name=${encodeURIComponent(name)}; path=/; max-age=${7 * 24 * 60 * 60}; SameSite=Lax`;
+        document.cookie = `email=${encodeURIComponent(email)}; path=/; max-age=${7 * 24 * 60 * 60}; SameSite=Lax`;
+        document.cookie = `password=${encodeURIComponent(password)}; path=/; max-age=${7 * 24 * 60 * 60}; SameSite=Lax`;
+
+    
+      alert("Registration successful!");
+      window.location.href = "login.html"; 
+    }
+    </script>
+    
+</body>
+</html>

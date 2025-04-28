@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us - Mystical Beings PH</title>
+  <link rel="stylesheet" href="css/nav.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/font.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <style>
+    
+    .main {
+      margin: 0;
+      padding: 0;
+      background: #f8f4ef;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      
+    }
+    
+    header {
+      background-color: #401a1a;
+      color: white;
+      text-align: center;
+      padding: 50px 20px 30px;
+      margin-bottom: 0;
+      }
+
+  header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 15px;
+  }
+
+  header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 400;
+  }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: left; 
+    }
+
+    h2 {
+      color: #401a1a;
+      margin-bottom: 1rem;
+    }
+
+    p, li {
+      line-height: 1.6;
+    }
+
+    .card-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact, .mission-vision {
+      background: #fff7f0;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .mission-vision {
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .card {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      width: 45%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/image-removebg-preview.png" class="bav-logo">
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="creature.html">Creature Index</a></li>
+        <li><a href="blog.html">Blog Articles</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#" onclick="confirmLogout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <h1 >Mystical Beings of the Philippines</h1>
+    <p>Legends of the Supernatural</p>
+  </header>
+<div class="main">
+      <img src="images/logo-mystical.png" style="display: flex; justify-content: center;" alt="logo">
+
+  <section>
+    <h2><span style="color: red; font-size: larger;">I</span>ntroduction</h2>
+    <p style="text-align: justify;">
+      The Philippines has a rich array of myths and folklore, including supernatural creatures that have intrigued and frightened people for centuries. From the Aswang to the Kapre, these mythical beings are deeply embedded in Filipino tradition. This blog is designed to preserve, explore, and share these cultural gems through in-depth articles, historical insights, and regional variations.
+    </p>
+  </section>
+
+  
+
+  <section>
+    <h2><span style="color: red; font-size: larger;">O</span>ur Objectives</h2>
+    <ul>
+      <li>To educate and inform readers about mythical creatures in Philippine folklore.</li>
+      <li>To conserve folklores through writing and storytelling.</li>
+      <li>To analyze cultural implications of myths.</li>
+      <li>To provide a resource hub for folklore enthusiasts.</li>
+    </ul>
+  </section>
+
+  <section class="mission-vision">
+    <div class="card-container">
+      <div class="card">
+        <h2><span style="color: red; font-size: larger;">M</span>ission</h2>
+        <p style="text-align: justify;">
+          To educate and preserve the legacy of Philippine folklore by curating comprehensive, engaging, and culturally sensitive content about mythical beings and their impact on society.
+        </p>
+      </div>
+      <div class="card">
+        <h2><span style="color: red; font-size: larger;">V</span>ision</h2>
+        <p style="text-align: justify;">
+          To be the leading online repository and storytelling platform for Philippine supernatural folklore, inspiring generations to learn and cherish these mystical narratives.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>If you have questions, feedback, or suggestions, feel free to reach out:</p>
+    <p><strong>Email:</strong> contact@mysticalbeingsph.com</p>
+    <p><strong>Facebook:</strong> fb.com/MysticalBeingsPH</p>
+    <p><strong>Instagram:</strong> @mysticalbeingsph</p>
+  </section>
+</div>
+
+<footer class="footer">
+  <div class="footer-left">
+    <img src="images/USER_1_-removebg-preview.png" alt="Logo" class="footer-logo">
+  </div>
+  <div class="footer-right">
+    © 2025 Your Company. All rights reserved.
+  </div>
+</footer>
+
+  <script src="js/nav.js"></script>
+  <script>
+
+    function confirmLogout() {
+    let confirmAction = confirm("Are you sure you want to logout?");
+    if (confirmAction) {
+      window.location.href = "landing.html";
+    }
+  }
+  </script>
+</body>
+</html>

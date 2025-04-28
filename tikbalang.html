@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tikbalang - Philippine Mythical Creature</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/font.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/style-creature.css" />
+
+  <style>
+  
+
+  </style>
+</head> 
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/image-removebg-preview.png" class="bav-logo">
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="creature.html">Creature Index</a></li>
+        <li><a href="blog.html">Blog Articles</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#" onclick="confirmLogout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>Tikbalang</h1>
+
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="images/tikbalang/tikbalang1.jpg" class="img1" style="width:100%">
+      </div>
+    
+      <div class="mySlides fade">
+        <img src="images/tikbalang/tikbalang2.jpg" class="img1" style="width:100%">
+      </div>
+    
+      <div class="mySlides fade">
+        <img src="images/tikbalang/tikbalang4.jpg" class="img1" style="width:100%">
+      </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
+    <p><strong>Overview:</strong> The <em>Tikbalang</em> is a mythical creature from Philippine folklore that is said to have the body of a human and the head of a horse. It is known to play tricks on travelers, leading them astray in the forests or mountains.</p>
+
+    <h2><span style="color: red;" >P</span>hysical <span style="color: red;" >P</span>escription</h2>
+    <ul>
+      <li>Head of a horse, body of a human</li>
+      <li>Tall and thin with elongated limbs</li>
+      <li>Long black hair and glowing eyes</li>
+    </ul>
+
+    <h2><span style="color: red;" >C</span>bilities</h2>
+    <ul>
+      <li>Trickery: It leads travelers off their path to confuse them.</li>
+      <li>Speed: Tikbalangs are very fast and can outrun humans.</li>
+      <li>Control over animals: It can summon wild animals to assist in its mischief.</li>
+    </ul>
+
+    <h2><span style="color: red;" >W</span>eaknesses</h2>
+    <ul>
+      <li>Turning one's shirt inside-out will confuse the Tikbalang, causing it to lose its power over the traveler.</li>
+      <li>Offering a prayer to the Tikbalang is also said to ward it off.</li>
+    </ul>
+
+    <h2><span style="color: red;" >C</span>ultural <span style="color: red;" >S</span>ignificance</h2>
+    <p>The Tikbalang is a prominent figure in Filipino folklore, often cited as a cause for people getting lost in rural areas. It is also a symbol of mischief and trickery, warning travelers to stay on their path and avoid straying into unknown territory.</p>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <img src="images/USER_1_-removebg-preview.png" alt="Logo" class="footer-logo">
+    </div>
+    <div class="footer-right">
+      © 2025 Your Company. All rights reserved.
+    </div>
+  </footer>
+  <script src="js/nav.js"></script>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+    
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }    
+    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+    
+      slides[slideIndex - 1].style.display = "block";  
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 3000); 
+    }
+  </script>
+</body>
+</html>

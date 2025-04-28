@@ -1,0 +1,92 @@
+
+body {
+    margin: 0;
+    line-height: 1.6;
+    background: #f8f4ef;
+    color: #222;
+    margin-top: 100px;
+  }
+  
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;    
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    color: #8B0000;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin-top: 25px;
+    color: #444;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  ul li {
+    margin-bottom: 8px;
+  }
+
+  .img1 {
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  }
+
+  .slideshow-container {
+  width: 600px;         
+  height: 350px;    
+  position: relative;
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  .mySlides {
+  display: none;
+  }
+
+  .mySlides img {
+  width: 100%;            
+  height: 300px;         
+  object-fit: cover;      
+  border-radius: 12px;    
+  }
+
+  .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+  from { opacity: 0.4 } 
+  to { opacity: 1 }
+  }
+
+  .dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.4s ease;
+  }
+
+  .active {
+  background-color: #717171;
+  }
+

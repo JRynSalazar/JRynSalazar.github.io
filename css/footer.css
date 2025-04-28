@@ -1,0 +1,22 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #401a1a;
+    color: #fff;
+  }
+  
+  .footer-left {
+    display: flex;
+    align-items: center;
+  }
+    
+  .footer-logo {
+    height: 40px; /* Adjust size as you like */
+  }
+  
+  .footer-right {
+    font-size: 14px;
+  }
+  
