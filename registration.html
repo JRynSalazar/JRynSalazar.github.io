@@ -13,11 +13,12 @@
     }
 
     body {
-      background: linear-gradient(to right, #667eea, #764ba2);
+      background: linear-gradient(to right, #401a1a, #e11010);
       height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 0 10px;
     }
 
     .container {
@@ -26,7 +27,7 @@
       border-radius: 12px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.1);
       width: 100%;
-      max-width: 400px;
+      max-width: 450px;
     }
 
     .container h2 {
@@ -62,7 +63,7 @@
     .btn {
       width: 100%;
       padding: 0.8rem;
-      background: #667eea;
+      background: #401a1a;
       color: white;
       font-weight: bold;
       border: none;
@@ -72,7 +73,7 @@
     }
 
     .btn:hover {
-      background: #5a67d8;
+      background: #7d3333;
     }
 
     .footer {
@@ -90,36 +91,93 @@
     .footer a:hover {
       text-decoration: underline;
     }
+    @media screen and (max-width: 768px) {
+      .container {
+        padding: 1.5rem 2rem;
+      }
+
+      .container h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+      }
+
+      .form-group input {
+        padding: 0.65rem;
+      }
+
+      .btn {
+        padding: 0.75rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      body {
+        padding: 0 5px;
+      }
+
+      .container {
+        padding: 1rem 1.5rem;
+        max-width: 100%;
+      }
+
+      .container h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .form-group input {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+      }
+
+      .btn {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+      }
+
+      .footer {
+        font-size: 0.85rem;
+      }
+    }
+    
+    .img1 {
+      width: 50%;
+      max-width: 300px;
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <img class="img1" src="images/logo-mystical.png" alt="">
+
     <h2>Create Account</h2>
     <form onsubmit="register(event)">
-        <div class="form-group">
-          <label for="fullname">Full Name</label>
-          <input type="text" id="name" placeholder="Enter Name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="Enter your Email" required>
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter password" required>
-        </div>
-        <div class="form-group">
-          <label for="confirm">Confirm Password</label>
-          <input type="password" id="confirm" placeholder="Confirm password" required>
-        </div>
-        <button type="submit" class="btn">Register</button>
-      </form>
-      
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="name" placeholder="Enter Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your Email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirm">Confirm Password</label>
+        <input type="password" id="confirm" placeholder="Confirm password" required>
+      </div>
+      <button type="submit" class="btn">Register</button>
+    </form>
     <div class="footer">
-      Already have an account? <a href="#">Login here</a>
+      Already have an account? <a href="login.html"><b>Login here</b></a>
     </div>
   </div>
-
 
   <script>
     function register(event) {
@@ -135,15 +193,13 @@
         return;
       }
     
-        document.cookie = `name=${encodeURIComponent(name)}; path=/; max-age=${7 * 24 * 60 * 60}; SameSite=Lax`;
-        document.cookie = `email=${encodeURIComponent(email)}; path=/; max-age=${7 * 24 * 60 * 60}; SameSite=Lax`;
-        document.cookie = `password=${encodeURIComponent(password)}; path=/; max-age=${7 * 24 * 60 * 60}; SameSite=Lax`;
-
+      document.cookie = `name=${encodeURIComponent(name)}; path=/; max-age=${7 * 24 * 60 * 60}; SameSite=Lax`;
+      document.cookie = `email=${encodeURIComponent(email)}; path=/; max-age=${7 * 24 * 60 * 60}; SameSite=Lax`;
+      document.cookie = `password=${encodeURIComponent(password)}; path=/; max-age=${7 * 24 * 60 * 60}; SameSite=Lax`;
     
       alert("Registration successful!");
       window.location.href = "login.html"; 
     }
-    </script>
-    
+  </script>
 </body>
 </html>

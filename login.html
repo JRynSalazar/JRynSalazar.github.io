@@ -13,11 +13,21 @@
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(to right, #4e54c8, #8f94fb);
+      background: linear-gradient(to right, #401a1a, #e11010);
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      flex-direction: column; 
+    }
+
+    .img1 {
+      width: 60%;
+      max-width: 300px;
+      margin-bottom: 20px;
+      display: block; 
+      margin-left: auto; 
+      margin-right: auto; 
     }
 
     .login-box {
@@ -56,7 +66,7 @@
     }
 
     .input-group input:focus {
-      border-color: #4e54c8;
+      border-color: #401a1a;
       outline: none;
       box-shadow: 0 0 0 2px rgba(78, 84, 200, 0.2);
     }
@@ -64,7 +74,7 @@
     .btn-login {
       width: 100%;
       padding: 0.8rem;
-      background-color: #4e54c8;
+      background-color: #401a1a;
       color: white;
       font-weight: bold;
       border: none;
@@ -75,7 +85,7 @@
     }
 
     .btn-login:hover {
-      background-color: #3c40a1;
+      background-color: #7d3333;
     }
 
     .bottom-text {
@@ -94,10 +104,75 @@
     .bottom-text a:hover {
       text-decoration: underline;
     }
+
+    @media screen and (max-width: 768px) {
+      .login-box {
+        padding: 2rem 2.5rem;
+      }
+
+      .login-box h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .input-group input {
+        padding: 0.65rem;
+        font-size: 0.9rem;
+      }
+
+      .btn-login {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+      }
+
+      .img1 {
+        width: 50%;
+        max-width: 250px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      body {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1rem;
+      }
+
+      .login-box {
+        width: 90%;
+        padding: 1.5rem;
+      }
+
+      .input-group input {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+      }
+
+      .btn-login {
+        padding: 0.75rem;
+        font-size: 0.95rem;
+      }
+
+      .bottom-text {
+        font-size: 0.8rem;
+      }
+
+      .img1 {
+        width: 50%;
+        max-width: 300px;
+        margin-bottom: 2rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   </style>
 </head>
 <body>
+  
   <div class="login-box">
+    <img class="img1" src="images/logo-mystical.png" alt="Logo">
     <h2>Login</h2>
     <form onsubmit="login(event)">
       <div class="input-group">
@@ -137,8 +212,6 @@
         alert("Invalid credentials.");
       }
     }
-
   </script>
-  
 </body>
 </html>
