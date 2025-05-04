@@ -22,6 +22,32 @@
       background-attachment: fixed;
       border-radius: 8px;
     }
+
+    .alphabet-filter {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .alphabet-button {
+      background-color: rgba(255, 255, 255, 0.85);
+      border: 2px solid #a00;
+      color: #a00;
+      font-weight: bold;
+      border-radius: 2px;
+      margin: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-family: 'Georgia', serif;
+    }
+
+    .alphabet-button:hover {
+      background-color: #a00;
+      color: white;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -62,35 +88,37 @@
       style="padding: 10px; width: 100%; max-width: 400px; margin: 20px auto; display: block; border-radius: 5px; border: 1px solid #ccc;"
     />
 
-    <div class="alphabet-filter" style="display: flex; justify-content: center; flex-wrap: wrap;">
-      <button onclick="filterByLetter('A')" style="margin: 5px;">A</button>
-      <button onclick="filterByLetter('B')" style="margin: 5px;">B</button>
-      <button onclick="filterByLetter('C')" style="margin: 5px;">C</button>
-      <button onclick="filterByLetter('D')" style="margin: 5px;">D</button>
-      <button onclick="filterByLetter('E')" style="margin: 5px;">E</button>
-      <button onclick="filterByLetter('F')" style="margin: 5px;">F</button>
-      <button onclick="filterByLetter('G')" style="margin: 5px;">G</button>
-      <button onclick="filterByLetter('H')" style="margin: 5px;">H</button>
-      <button onclick="filterByLetter('I')" style="margin: 5px;">I</button>
-      <button onclick="filterByLetter('J')" style="margin: 5px;">J</button>
-      <button onclick="filterByLetter('K')" style="margin: 5px;">K</button>
-      <button onclick="filterByLetter('L')" style="margin: 5px;">L</button>
-      <button onclick="filterByLetter('M')" style="margin: 5px;">M</button>
-      <button onclick="filterByLetter('N')" style="margin: 5px;">N</button>
-      <button onclick="filterByLetter('O')" style="margin: 5px;">O</button>
-      <button onclick="filterByLetter('P')" style="margin: 5px;">P</button>
-      <button onclick="filterByLetter('Q')" style="margin: 5px;">Q</button>
-      <button onclick="filterByLetter('R')" style="margin: 5px;">R</button>
-      <button onclick="filterByLetter('S')" style="margin: 5px;">S</button>
-      <button onclick="filterByLetter('T')" style="margin: 5px;">T</button>
-      <button onclick="filterByLetter('U')" style="margin: 5px;">U</button>
-      <button onclick="filterByLetter('V')" style="margin: 5px;">V</button>
-      <button onclick="filterByLetter('W')" style="margin: 5px;">W</button>
-      <button onclick="filterByLetter('X')" style="margin: 5px;">X</button>
-      <button onclick="filterByLetter('Y')" style="margin: 5px;">Y</button>
-      <button onclick="filterByLetter('Z')" style="margin: 5px;">Z</button>
-      <button onclick="filterByLetter('All')" style="margin: 5px;">All</button>
-    </div>
+    <!-- <div class="alphabet-filter" style="display: flex; justify-content: center; flex-wrap: wrap;"> -->
+      <div class="alphabet-filter">
+        <button class="alphabet-button" onclick="filterByLetter('A')">A</button>
+        <button class="alphabet-button" onclick="filterByLetter('B')">B</button>
+        <button class="alphabet-button" onclick="filterByLetter('C')">C</button>
+        <button class="alphabet-button" onclick="filterByLetter('D')">D</button>
+        <button class="alphabet-button" onclick="filterByLetter('E')">E</button>
+        <button class="alphabet-button" onclick="filterByLetter('F')">F</button>
+        <button class="alphabet-button" onclick="filterByLetter('G')">G</button>
+        <button class="alphabet-button" onclick="filterByLetter('H')">H</button>
+        <button class="alphabet-button" onclick="filterByLetter('I')">I</button>
+        <button class="alphabet-button" onclick="filterByLetter('J')">J</button>
+        <button class="alphabet-button" onclick="filterByLetter('K')">K</button>
+        <button class="alphabet-button" onclick="filterByLetter('L')">L</button>
+        <button class="alphabet-button" onclick="filterByLetter('M')">M</button>
+        <button class="alphabet-button" onclick="filterByLetter('N')">N</button>
+        <button class="alphabet-button" onclick="filterByLetter('O')">O</button>
+        <button class="alphabet-button" onclick="filterByLetter('P')">P</button>
+        <button class="alphabet-button" onclick="filterByLetter('Q')">Q</button>
+        <button class="alphabet-button" onclick="filterByLetter('R')">R</button>
+        <button class="alphabet-button" onclick="filterByLetter('S')">S</button>
+        <button class="alphabet-button" onclick="filterByLetter('T')">T</button>
+        <button class="alphabet-button" onclick="filterByLetter('U')">U</button>
+        <button class="alphabet-button" onclick="filterByLetter('V')">V</button>
+        <button class="alphabet-button" onclick="filterByLetter('W')">W</button>
+        <button class="alphabet-button" onclick="filterByLetter('X')">X</button>
+        <button class="alphabet-button" onclick="filterByLetter('Y')">Y</button>
+        <button class="alphabet-button" onclick="filterByLetter('Z')">Z</button>
+        <button class="alphabet-button" onclick="filterByLetter('All')">All</button>
+      </div>
+      
     
     
     
@@ -135,70 +163,70 @@
         <img src="images/diwata/diwata3.jpg" alt="Tiyanak" class="creature-image" />
         <h3><span style="color: red;">D</span>iwata</h3>
         <p>A type of nature spirit or deity in Filipino mythology, often connected to the forests, mountains, and seas. They are generally benevolent, but some can be vengeful if offended.</p>
-        <a href="indexes/diwata.html" class="more-details-btn">Learn More</a>
+        <a href="diwata.html" class="more-details-btn">Learn More</a>
       </div>
 
       <div class="creature-item">
         <img src="images/balbal.jpg" alt="Balbal" class="creature-image" />
         <h3><span style="color: red;">B</span>albal</h3>
         <p>A creature that consumes human flesh, often appearing as a human by day and a monster by night. It’s said to feed on the dead or dying.</p>
-        <a href="indexes/balbal.html" class="more-details-btn">Learn More</a>
+        <a href="balbal.html" class="more-details-btn">Learn More</a>
       </div>
 
       <div class="creature-item">
         <img src="images/sigbin.jpg" alt="Sigbin" class="creature-image" />
         <h3><span style="color: red;">S</span>igbin</h3>
         <p>A nocturnal creature that resembles a hornless goat or a dog, with glowing eyes and a long, flexible tail. It is believed to suck the blood of its victims.</p>
-        <a href="indexes/sigbin.html" class="more-details-btn">Learn More</a>
+        <a href="sigbin.html" class="more-details-btn">Learn More</a>
       </div>
 
       <div class="creature-item">
         <img src="images/nuno-sa-punso.jpg" alt="Nuno sa Punso" class="creature-image" />
         <h3><span style="color: red;">N</span>uno sa <span style="color: red;">P</span>unso</h3>
         <p>A dwarf-like creature that lives in mounds or anthills. Disturbing its home can lead to illness or misfortune.</p>
-        <a href="indexes/nuno-sa-punso.html" class="more-details-btn">Learn More</a>
+        <a href="nuno-sa-punso.html" class="more-details-btn">Learn More</a>
       </div>
 
       <div class="creature-item">
         <img src="images/mangkukulam.jpg" alt="Mangkukulam" class="creature-image" />
         <h3><span style="color: red;">M</span>angkukulam</h3>
         <p>A witch or sorceress who uses black magic to curse others. Known for summoning spirits and casting harmful spells.</p>
-        <a href="indexes/mangkukulam.html" class="more-details-btn">Learn More</a>
+        <a href="mangkukulam.html" class="more-details-btn">Learn More</a>
       </div>
 
       <div class="creature-item">
         <img src="images/bakunawa.jpg" alt="Bakunawa" class="creature-image" />
         <h3><span style="color: red;">B</span>akunawa</h3>
         <p>A sea serpent or dragon-like creature believed to cause eclipses by swallowing the moon. It has glowing eyes and a hunger for celestial bodies.</p>
-        <a href="indexes/bakunawa.html" class="more-details-btn">Learn More</a>
+        <a href="bakunawa.html" class="more-details-btn">Learn More</a>
       </div>
 
       <div class="creature-item">
         <img src="images/white-lady.jpg" alt="White Lady" class="creature-image" />
         <h3><span style="color: red;">W</span>hite Lady (Dama de Blanco)</h3>
         <p>A ghostly apparition of a woman in white. She haunts roads and bridges, and sometimes lures victims to their deaths.</p>
-        <a href="indexes/white-lady.html" class="more-details-btn">Learn More</a>
+        <a href="white-lady.html" class="more-details-btn">Learn More</a>
       </div>
 
       <div class="creature-item">
         <img src="images/bungisngis.jpg" alt="Bungisngis" class="creature-image" />
         <h3><span style="color: red;">B</span>ungisngis</h3>
         <p>A giant with a huge mouth and loud laugh, often creating harmless havoc and known for its mischievous nature.</p>
-        <a href="indexes/bungisngis.html" class="more-details-btn">Learn More</a>
+        <a href="bungisngis.html" class="more-details-btn">Learn More</a>
       </div>
 
       <div class="creature-item">
-        <img src="images/basilisco.jpg" alt="Basilisco" class="creature-image" />
+        <img src="images/basilisko.jpg" alt="Basilisco" class="creature-image" />
         <h3><span style="color: red;">B</span>asilisco</h3>
         <p>A serpent-like creature with the ability to turn people to stone with its deadly gaze. Often depicted as a gigantic snake or dragon.</p>
-        <a href="indexes/basilisco.html" class="more-details-btn">Learn More</a>
+        <a href="basilisco.html" class="more-details-btn">Learn More</a>
       </div>
 
       <div class="creature-item">
         <img src="images/pugot.jpg" alt="Pugot" class="creature-image" />
         <h3><span style="color: red;">P</span>ugot</h3>
         <p>A headless creature associated with haunted places, believed to be a vengeful spirit punishing trespassers.</p>
-        <a href="indexes/pugot.html" class="more-details-btn">Learn More</a>
+        <a href="pugot.html" class="more-details-btn">Learn More</a>
       </div>
 
 
@@ -206,7 +234,7 @@
         <img src="images/la-llorona.avif" alt="La Llorona" class="creature-image" />
         <h3><span style="color: red;">L</span>a <span style="color: red;">L</span>lorona</h3>
         <p>The "Weeping Woman" who mourns her lost children. She roams near water, seeking others to replace them.</p>
-        <a href="indexes/la-llorona.html" class="more-details-btn">Learn More</a>
+        <a href="la-llorona.html" class="more-details-btn">Learn More</a>
       </div>
 
       
@@ -216,14 +244,14 @@
         <img src="images/bathala.png" alt="Bathala" class="creature-image" />
         <h3><span style="color: red;">B</span>athala</h3>
         <p>The supreme god in Tagalog mythology. While not a creature in the traditional sense, Bathala is a benevolent deity that governs the heavens and is associated with creation and protection.</p>
-        <a href="indexes/bathala.html" class="more-details-btn">Learn More</a>
+        <a href="bathala.html" class="more-details-btn">Learn More</a>
       </div>
 
       <div class="creature-item">
         <img src="images/duwende.jpg" alt="Duwende" class="creature-image" />
         <h3><span style="color: red;">D</span>uwende</h3>
         <p>Small, dwarf-like creatures that live in homes or gardens. They can either be kind or mischievous, but they tend to favor people who respect nature and their surroundings.</p>
-        <a href="indexes/duwende.html" class="more-details-btn">Learn More</a>
+        <a href="duwende.html" class="more-details-btn">Learn More</a>
       </div>
       
       
@@ -286,14 +314,30 @@
 
     document.getElementById("searchInput").value = "";
   }
+
+  function getCookie(name) {
+    let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  if (getCookie("isLoggedIn") !== "true") {
+    window.location.href = "index.html"; 
+  }
   function confirmLogout() {
     let confirmAction = confirm("Are you sure you want to logout?");
     if (confirmAction) {
-      window.location.href = "landing.html";
+      document.cookie = "isLoggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/"; 
+      window.location.href = "index.html"; 
     }
   }
+
+  window.addEventListener("pageshow", function (event) {
+  if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+      location.reload();
+    }
+  });
   </script>
   
+  <script src="js/logout.js"></script>
   <script src="js/nav.js"></script>
 </body>
 </html>

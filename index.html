@@ -5,11 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 
+    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="css/landing.css" />
     <link rel="stylesheet" href="css/font.css" />
     <link rel="stylesheet" href="css/footer.css" />
-    
+    <script>
+      // Cookie helpers available early
+      function getCookie(name) {
+        let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        return match ? decodeURIComponent(match[2]) : null;
+      }
+  
+      // Redirect early if already logged in
+      if (getCookie("isLoggedIn") === "true") {
+        window.location.href = "home.html";
+      }
+    </script>
     <style>
 
       body {
@@ -149,6 +162,18 @@
     </div>
   </footer>
 <script>
+  
+window.addEventListener("pageshow", function (event) {
+  if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+      location.reload();
+    }
+  });
+    function setCookie(name, value, days) {
+      let date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); 
+      let expires = "expires=" + date.toUTCString();
+      document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
   function navigateTo(page) {
     window.location.href = page;
   }

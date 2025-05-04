@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>White Lady (Dama de Blanco) - Philippine Mythical Creature</title>
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/font.css" />
+  <link rel="stylesheet" href="css/style-creature.css" />
+</head> 
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/image-removebg-preview.png" class="bav-logo">
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="creature.html">Creature Index</a></li>
+        <li><a href="blog.html">Blog Articles</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#" onclick="confirmLogout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="container">
+      <h1>White Lady (Dama de Blanco)</h1>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="images/white-lady1.jpg" class="img1" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/white-lady2.jpg" class="img1" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/white-lady3.jpg" class="img1" style="width:100%">
+        </div>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+
+      <p><strong>Overview:</strong> The <em>White Lady</em> (Dama de Blanco) is a ghostly figure in Philippine folklore, typically seen wearing a long, flowing white gown. Her apparition is often linked to tragic events or unresolved emotions, with sightings often occurring in dark, isolated areas such as roadsides or abandoned houses.</p>
+
+      <h2><span style="color: darkgray;">P</span> hysical <span style="color: darkgray;">D</span>escription</h2>
+      <ul>
+        <li>Appears as a woman dressed in a white gown</li>
+        <li>Often has long, flowing hair, sometimes covering her face</li>
+        <li>Her figure is ghostly, and she glows in the dark, giving off an eerie presence</li>
+      </ul>
+
+      <h2><span style="color: darkgray;">A</span>bilities</h2>
+      <ul>
+        <li>Can appear suddenly, often on isolated roads or in remote locations</li>
+        <li>Her appearance is said to be linked to tragic events or mysterious deaths</li>
+        <li>In some stories, she is said to cause misfortune or haunt the living</li>
+      </ul>
+
+      <h2><span style="color: darkgray;">W</span>eaknesses</h2>
+      <ul>
+        <li>Like many ghosts, the White Lady may be dispelled by prayers, religious symbols, or light</li>
+        <li>Her appearance is sometimes linked to a need for closure or resolution of a past trauma</li>
+      </ul>
+
+      <h2><span style="color: darkgray;">C</span>ultural <span style="color: darkgray;">S</span>ignificance</h2>
+      <p>The White Lady is one of the most well-known ghost stories in the Philippines, often shared as cautionary tales. The apparition of the White Lady is said to be a manifestation of lingering sorrow or unfinished business. Many urban legends and ghost stories feature this figure, making her a cultural icon of Filipino horror folklore.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <img src="images/USER_1_-removebg-preview.png" alt="Logo" class="footer-logo">
+    </div>
+    <div class="footer-right">
+      © 2025 Your Company. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+    
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }    
+    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+    
+      slides[slideIndex - 1].style.display = "block";  
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 3000); 
+    }
+  </script>
+  <script src="js/logout.js"></script>
+</body>
+</html>

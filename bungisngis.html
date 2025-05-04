@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bungisngis - Philippine Mythical Creature</title>
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/font.css" />
+  <link rel="stylesheet" href="css/style-creature.css" />
+</head> 
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/image-removebg-preview.png" class="bav-logo">
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="creature.html">Creature Index</a></li>
+        <li><a href="blog.html">Blog Articles</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#" onclick="confirmLogout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="container">
+      <h1>Bungisngis</h1>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="images/bungisngis1.jpg" class="img1" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/bungisngis2.jpg" class="img1" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/bungisngis3.jpg" class="img1" style="width:100%">
+        </div>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+
+      <p><strong>Overview:</strong> The <em>Bungisngis</em> is a playful and mischievous giant from Philippine folklore. Often depicted as a giant with one large eye in the middle of its forehead, it is known for its laughter, which can be heard echoing from a distance. Though it can be frightening, the Bungisngis is generally harmless and known more for its boisterous antics than any malice.</p>
+
+      <h2><span style="color: purple;">P</span> hysical <span style="color: purple;">D</span>escription</h2>
+      <ul>
+        <li>Giant with a single large eye in the center of its forehead</li>
+        <li>Has a large mouth that is often seen laughing or smiling</li>
+        <li>Huge in size, with long limbs and a comical appearance</li>
+      </ul>
+
+      <h2><span style="color: purple;">A</span>bilities</h2>
+      <ul>
+        <li>Known for its loud, echoing laughter</li>
+        <li>Can cause chaos by knocking things over or frightening people with its appearance</li>
+        <li>While often seen as a prankster, it is not malicious and does not cause harm intentionally</li>
+      </ul>
+
+      <h2><span style="color: purple;">W</span>eaknesses</h2>
+      <ul>
+        <li>It is said to be easily distracted by shiny objects or loud noises</li>
+        <li>Can be tricked by clever people who use its own laughter against it</li>
+      </ul>
+
+      <h2><span style="color: purple;">C</span>ultural <span style="color: purple;">S</span>ignificance</h2>
+      <p>The Bungisngis represents the playful side of Filipino folklore. While it may initially be seen as terrifying due to its size and appearance, it is generally understood to be a creature that brings laughter and lightheartedness. It serves as a reminder of the importance of humor and the ability to find joy even in the face of fear.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <img src="images/USER_1_-removebg-preview.png" alt="Logo" class="footer-logo">
+    </div>
+    <div class="footer-right">
+      © 2025 Your Company. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+    
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }    
+    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+    
+      slides[slideIndex - 1].style.display = "block";  
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 3000); 
+    }
+  </script>
+  <script src="js/logout.js"></script>
+</body>
+</html>

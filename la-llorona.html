@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>La Llorona - Philippine Mythical Creature</title>
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/font.css" />
+  <link rel="stylesheet" href="css/style-creature.css" />
+</head> 
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/image-removebg-preview.png" class="bav-logo">
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="creature.html">Creature Index</a></li>
+        <li><a href="blog.html">Blog Articles</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#" onclick="confirmLogout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="container">
+      <h1>La Llorona</h1>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="images/la-llorona1.jpg" class="img1" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/la-llorona2.jpg" class="img1" style="width:100%">
+        </div>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+      </div>
+
+      <p><strong>Overview:</strong> La Llorona, or "The Weeping Woman," is a ghostly figure from Latin American and Filipino folklore. She is known for wandering near bodies of water, crying out for her lost children. The story of La Llorona varies, but she is often depicted as a tragic figure who drowned her children in a fit of madness or grief.</p>
+
+      <h2><span style="color: blue;">P</span> hysical <span style="color: blue;">D</span>escription</h2>
+      <ul>
+        <li>Appears as a woman dressed in white, with long, flowing hair</li>
+        <li>Her face is often obscured, and she is seen crying or wailing</li>
+        <li>Her footsteps are said to echo in the night as she searches for her children</li>
+      </ul>
+
+      <h2><span style="color: blue;">A</span>bilities</h2>
+      <ul>
+        <li>Ability to cry loudly, heard from far distances</li>
+        <li>Haunting presence that instills fear and sadness</li>
+        <li>Can lure people near bodies of water, where she can drown them or claim their souls</li>
+      </ul>
+
+      <h2><span style="color: blue;">W</span>eaknesses</h2>
+      <ul>
+        <li>Believed to be unable to cross running water, such as rivers</li>
+        <li>May be deterred by religious symbols or prayers</li>
+      </ul>
+
+      <h2><span style="color: blue;">C</span>ultural <span style="color: blue;">S</span>ignificance</h2>
+      <p>La Llorona is often used in Filipino folklore as a cautionary tale for children, warning them to stay away from rivers and lakes at night. Her tragic story is a symbol of maternal loss, guilt, and the consequences of one’s actions.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <img src="images/USER_1_-removebg-preview.png" alt="Logo" class="footer-logo">
+    </div>
+    <div class="footer-right">
+      © 2025 Your Company. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+    
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }    
+    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+    
+      slides[slideIndex - 1].style.display = "block";  
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 3000); 
+    }
+  </script>
+  <script src="js/logout.js"></script>
+</body>
+</html>

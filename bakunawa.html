@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bakunawa - Philippine Mythical Creature</title>
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/font.css" />
+  <link rel="stylesheet" href="css/style-creature.css" />
+</head> 
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/image-removebg-preview.png" class="bav-logo">
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="creature.html">Creature Index</a></li>
+        <li><a href="blog.html">Blog Articles</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#" onclick="confirmLogout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="container">
+      <h1>Bakunawa</h1>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="images/bakunawa1.jpg" class="img1" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/bakunawa2.jpg" class="img1" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/bakunawa3.jpg" class="img1" style="width:100%">
+        </div>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+
+      <p><strong>Overview:</strong> The <em>Bakunawa</em> is a fearsome sea serpent in Philippine mythology. It is often said to be responsible for eclipses, as it is believed to swallow the moon. The Bakunawa is considered one of the most terrifying creatures in Filipino folklore.</p>
+
+      <h2><span style="color: darkblue;">P</span> hysical <span style="color: darkblue;">D</span>escription</h2>
+      <ul>
+        <li>Large sea serpent, often depicted with a body like a dragon</li>
+        <li>Its scales glimmer like the night sky</li>
+        <li>It has a long, sinuous body, with sharp teeth and glowing eyes</li>
+      </ul>
+
+      <h2><span style="color: darkblue;">A</span>bilities</h2>
+      <ul>
+        <li>Ability to control the tides and cause storms</li>
+        <li>Can swallow the moon, causing eclipses</li>
+        <li>Has the power to create fear and darkness when it is in the process of swallowing the moon</li>
+      </ul>
+
+      <h2><span style="color: darkblue;">W</span>eaknesses</h2>
+      <ul>
+        <li>Its power can be broken by loud noises or music, which is said to scare it away</li>
+        <li>Sometimes, people use offerings or prayers to appease the Bakunawa</li>
+        <li>Religious symbols and the light of the moon can also weaken it</li>
+      </ul>
+
+      <h2><span style="color: darkblue;">C</span>ultural <span style="color: darkblue;">S</span>ignificance</h2>
+      <p>The Bakunawa is a major part of Filipino folklore and is often associated with natural phenomena like eclipses. In some traditions, it is also seen as a guardian of the seas. The myth of the Bakunawa reflects the people's awe and respect for the natural world and its mysteries.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <img src="images/USER_1_-removebg-preview.png" alt="Logo" class="footer-logo">
+    </div>
+    <div class="footer-right">
+      © 2025 Your Company. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+    
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }    
+    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+    
+      slides[slideIndex - 1].style.display = "block";  
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 3000); 
+    }
+  </script>
+  <script src="js/logout.js"></script>
+</body>
+</html>

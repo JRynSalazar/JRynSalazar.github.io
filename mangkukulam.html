@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mangkukulam - Philippine Mythical Creature</title>
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/font.css" />
+  <link rel="stylesheet" href="css/style-creature.css" />
+</head> 
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/image-removebg-preview.png" class="bav-logo">
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="creature.html">Creature Index</a></li>
+        <li><a href="blog.html">Blog Articles</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#" onclick="confirmLogout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="container">
+      <h1>Mangkukulam</h1>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="images/mangkukulam1.jpg" class="img1" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/mangkukulam2.jpg" class="img1" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/mangkukulam3.jpg" class="img1" style="width:100%">
+        </div>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+
+      <p><strong>Overview:</strong> The <em>Mangkukulam</em> is a witch or sorcerer in Philippine mythology who practices black magic, often casting spells for personal gain or to harm others. They are feared for their ability to cause illness, accidents, or even death through curses and rituals.</p>
+
+      <h2><span style="color: darkgreen;">P</span> hysical <span style="color: darkgreen;">D</span>escription</h2>
+      <ul>
+        <li>Typically appears as a regular person by day</li>
+        <li>In some cases, may have a disturbing or sinister appearance</li>
+        <li>They are often depicted with magical implements like a cauldron, herbs, or a wand</li>
+      </ul>
+
+      <h2><span style="color: darkgreen;">A</span>bilities</h2>
+      <ul>
+        <li>Can cast spells to inflict pain, illness, or even death</li>
+        <li>Uses herbal concoctions, charms, and curses</li>
+        <li>Has the ability to control supernatural forces and creatures for malevolent purposes</li>
+      </ul>
+
+      <h2><span style="color: darkgreen;">W</span>eaknesses</h2>
+      <ul>
+        <li>Religious symbols, charms, and certain incantations are said to ward off their magic</li>
+        <li>Can be defeated by another powerful practitioner of magic or through rituals</li>
+        <li>May lose their power if exposed or if their spells backfire</li>
+      </ul>
+
+      <h2><span style="color: darkgreen;">C</span>ultural <span style="color: darkgreen;">S</span>ignificance</h2>
+      <p>The Mangkukulam is a reminder of the belief in magic, spiritual power, and the balance between good and evil. Historically, they were both feared and respected in communities. In modern times, the Mangkukulam still plays a role in popular culture and the traditions of Filipino folk medicine.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <img src="images/USER_1_-removebg-preview.png" alt="Logo" class="footer-logo">
+    </div>
+    <div class="footer-right">
+      © 2025 Your Company. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+    
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }    
+    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+    
+      slides[slideIndex - 1].style.display = "block";  
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 3000); 
+    }
+  </script>
+  <script src="js/logout.js"></script>
+</body>
+</html>

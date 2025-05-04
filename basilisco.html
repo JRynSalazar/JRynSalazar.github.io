@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basilisco - Philippine Mythical Creature</title>
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/font.css" />
+  <link rel="stylesheet" href="css/style-creature.css" />
+</head> 
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/image-removebg-preview.png" class="bav-logo">
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="creature.html">Creature Index</a></li>
+        <li><a href="blog.html">Blog Articles</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#" onclick="confirmLogout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="container">
+      <h1>Basilisco</h1>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="images/basilisko1.jpg" class="img1" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/basilisko2.jpg" class="img1" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/basilisko3.jpg" class="img1" style="width:100%">
+        </div>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+
+      <p><strong>Overview:</strong> The <em>Basilisco</em> is a dangerous serpent-like creature from Philippine folklore. It is often described as a giant lizard or snake with the ability to kill with its gaze. The creature is feared for its venomous nature and its deadly stare, which is said to turn its victims into stone or cause instant death.</p>
+
+      <h2><span style="color: green;">P</span> hysical <span style="color: green;">D</span>escription</h2>
+      <ul>
+        <li>Serpent-like or lizard-like creature with a large, terrifying head</li>
+        <li>Has a fearsome gaze that can petrify or kill victims instantly</li>
+        <li>Usually depicted with sharp fangs and venomous qualities</li>
+      </ul>
+
+      <h2><span style="color: green;">A</span>bilities</h2>
+      <ul>
+        <li>Powerful gaze that can kill or petrify with a single look</li>
+        <li>Venomous bite that can cause death or paralysis</li>
+        <li>Known to lurk in dark, secluded places, waiting for unsuspecting prey</li>
+      </ul>
+
+      <h2><span style="color: green;">W</span>eaknesses</h2>
+      <ul>
+        <li>The Basilisco is said to be vulnerable to loud noises or sudden distractions</li>
+        <li>It is believed that the creature can be defeated by covering its eyes or using reflective surfaces to avoid direct eye contact</li>
+        <li>Holy objects, such as crosses or religious symbols, may also offer protection</li>
+      </ul>
+
+      <h2><span style="color: green;">C</span>ultural <span style="color: green;">S</span>ignificance</h2>
+      <p>The Basilisco is a creature often used in Filipino folklore to convey the dangers of unchecked rage or the power of fear. Its ability to turn people into stone symbolizes the paralyzing effect of terror. It is a cautionary tale for those who are easily swayed by fear and seek to avoid facing their challenges head-on.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <img src="images/USER_1_-removebg-preview.png" alt="Logo" class="footer-logo">
+    </div>
+    <div class="footer-right">
+      © 2025 Your Company. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+    
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }    
+    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+    
+      slides[slideIndex - 1].style.display = "block";  
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 3000); 
+    }
+  </script>
+  <script src="js/logout.js"></script>
+</body>
+</html>

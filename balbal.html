@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Balbal - Philippine Mythical Creature</title>
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/font.css" />
+  <link rel="stylesheet" href="css/style-creature.css" />
+</head> 
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/image-removebg-preview.png" class="bav-logo">
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="creature.html">Creature Index</a></li>
+        <li><a href="blog.html">Blog Articles</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#" onclick="confirmLogout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="container">
+      <h1>Balbal</h1>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="images/balbal1.webp" class="img1" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/balbal2.jpg" class="img1" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/balbal3.jpg" class="img1" style="width:100%">
+        </div>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+
+      <p><strong>Overview:</strong> The <em>Balbal</em> is a ghoul-like creature from Philippine folklore, notorious for its horrifying habit of exhuming corpses to feed on human flesh. It is known for its keen sense of smell that helps it locate fresh cadavers buried underground.</p>
+
+      <h2><span style="color: maroon;">P</span> hysical <span style="color: maroon;">D</span>escription</h2>
+      <ul>
+        <li>Grotesque, humanoid monster with dark, leathery skin</li>
+        <li>Long claws and sharp fangs for digging and tearing flesh</li>
+        <li>Emits a foul, corpse-like odor</li>
+      </ul>
+
+      <h2><span style="color: maroon;">A</span>bilities</h2>
+      <ul>
+        <li>Can sniff out freshly buried corpses from great distances</li>
+        <li>Powerful claws for unearthing graves</li>
+        <li>Ability to replace the stolen corpse with a banana trunk to fool people</li>
+      </ul>
+
+      <h2><span style="color: maroon;">W</span>eaknesses</h2>
+      <ul>
+        <li>Can be repelled by traditional protective charms or amulets</li>
+        <li>Only active at night—avoids sunlight</li>
+        <li>Easily overpowered by strong spiritual defenses or rituals</li>
+      </ul>
+
+      <h2><span style="color: maroon;">C</span>ultural <span style="color: maroon;">S</span>ignificance</h2>
+      <p>The Balbal is a cautionary figure in folk stories, often used to emphasize the sanctity of burial rites and the need to protect the dead. It also reflects deep cultural fears about death, the afterlife, and respect for ancestors. Villagers often place guards by graves at night or perform rituals to ward off this creature.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <img src="images/USER_1_-removebg-preview.png" alt="Logo" class="footer-logo">
+    </div>
+    <div class="footer-right">
+      © 2025 Your Company. All rights reserved.
+    </div>
+  </footer>
+  <script src="js/logout.js"></script>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+    
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }    
+    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+    
+      slides[slideIndex - 1].style.display = "block";  
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 3000); 
+    }
+  </script>
+</body>
+</html>

@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="css/font.css">
   <title>Login</title>
+  <script>
+    // Cookie helpers available early
+    function getCookie(name) {
+      let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+      return match ? decodeURIComponent(match[2]) : null;
+    }
+
+    // Redirect early if already logged in
+    if (getCookie("isLoggedIn") === "true") {
+      window.location.href = "home.html";
+    }
+  </script>
   <style>
     * {
       box-sizing: border-box;
@@ -192,27 +204,45 @@
   </div>
   
   <script>
-    function getCookie(name) {
-      let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-      return match ? decodeURIComponent(match[2]) : null;
+
+    window.addEventListener("pageshow", function (event) {
+        if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+          location.reload();
+        }
+      });
+        function setCookie(name, value, days) {
+      let date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); 
+      let expires = "expires=" + date.toUTCString();
+      document.cookie = name + "=" + value + ";" + expires + ";path=/";
     }
 
-    function login(event) {
-      event.preventDefault();
-      
-      let inputEmail = document.getElementById("loginEmail").value;
-      let inputPassword = document.getElementById("loginPassword").value;
+function getCookie(name) {
+  let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  return match ? decodeURIComponent(match[2]) : null;
+}
 
-      let savedEmail = getCookie("email");
-      let savedPassword = getCookie("password");
+function login(event) {
+  event.preventDefault();
 
-      if (inputEmail === savedEmail && inputPassword === savedPassword) {
-        alert("Login successful!");
-        window.location.href = "home.html";
-      } else {
-        alert("Invalid credentials.");
-      }
-    }
+  let inputEmail = document.getElementById("loginEmail").value;
+  let inputPassword = document.getElementById("loginPassword").value;
+
+  let savedEmail = getCookie("email");
+  let savedPassword = getCookie("password");
+
+  if (inputEmail === savedEmail && inputPassword === savedPassword) {
+
+    setCookie("isLoggedIn", "true", 7); 
+    window.location.href = "home.html"; 
+  } else {
+    alert("Invalid credentials.");
+  }
+}
+
+
+
   </script>
+  
 </body>
 </html>
